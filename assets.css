@@ -84,7 +84,7 @@ body {
  */
 
 a:focus {
-    outline: thin dotted;
+    outline: none;
 }
 
 /**
@@ -281,6 +281,7 @@ textarea {
     margin: 0; /* 3 */
 }
 
+
 /**
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
@@ -404,13 +405,13 @@ body {
 }
 
 body {
-  background: #fff;
+  background: #0f0f0f;
 }
 
 body,
 input,
 textarea {
-  color: #191919;
+  color: #ffffff;
   font: 14px/140% 'Open Sans', Arial, sans-serif;
 }
 
@@ -441,12 +442,16 @@ code {
 #sidebar {
   background: #191919;
   color: #fff;
-  float: left;  
+  float: left;
   height: 100%;
   overflow: auto;
   position: fixed;
   top: 0;
   width: 240px;
+
+  -moz-box-shadow: 3px 3px 5px rgba(0, 0, 0, .5);
+  -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, .5);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, .5);
 }
 
 #sidebar h1 {
@@ -461,6 +466,7 @@ code {
   color: #888;
   font-size: 14px;
   margin: 0;
+  padding: 0 0 15px;
 }
 
 #sidebar ul {
@@ -480,7 +486,7 @@ code {
 #sidebar ul li a {
   color: #fff;
   display: block;
-  padding: 0 0 15px;
+  padding: 0 0 10px;
 }
 #sidebar ul li a:active,
 #sidebar ul li a.active {
@@ -513,13 +519,6 @@ code {
 #content {
   padding: 20px;
   padding-left: 260px;
-  max-width: 700px;
-}
-
-#content .control {
-  cursor: pointer;
-  font-size: 12px;
-  margin-left: 15px;
 }
 
 #content article {
@@ -529,9 +528,9 @@ code {
 
 #content article > a {
   background: #333;
-  border-radius: 2px;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
+  border-radius: 2px 2px 0 0;
+  -moz-border-radius: 2px 2px 0 0;
+  -webkit-border-radius: 2px 2px 0 0;
   cursor: pointer;
   display: block;
   padding: 15px;
@@ -616,24 +615,70 @@ code {
 #content h3 {
 }
 
+#content .body a code {
+  color: #119bdf;
+}
+
+#content .body.sliding {
+  position: relative;
+  top: -5px;
+}
+
 #content .body {
-  border-top: 1px solid #eef1f2;
+  width: calc(100% - 30px);
+
+  background-color: #3f3f3f;
+
   display: block;
-  padding: 15px 15px 0;
+  padding: 15px 15px 5px !important;
+
+  border-radius: 0 0 2px 2px;
+  -moz-border-radius: 0 0 2px 2px;
+  -webkit-border-radius: 0 0 2px 2px;
 }
 
 #content .body code {
-  border: 1px solid #e2e7ea;
-  background: #eef1f2;
+  background: #1f1f1f;
   border-radius: 2px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
-  color: #546974;
+  color: #737CA1;
   padding: 0 1px;
 }
 
-#content .body p > code {
+#content .body code.language-text {
   display: block;
   padding: 15px;
   white-space: pre;
+}
+
+.controls {
+  position: absolute;
+  bottom: 0;
+
+  width: 210px;
+  height: 20px;
+
+  padding: 15px;
+
+  background-color: #3f3f3f;
+}
+
+.control.hide {
+  float: right;
+}
+
+.control.show {
+  float: left;
+}
+
+#sidebar .control {
+  cursor: pointer;
+  font-size: 14px;
+}
+
+hr {
+  border-color: rgba(255, 255, 255, 0.25);
+
+  margin: 0 0 10px;
 }

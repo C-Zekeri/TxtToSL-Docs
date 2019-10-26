@@ -1,6 +1,6 @@
 ---
-exclude: ['README.markdown']
 permalink: ':title'
-pygments: true
+markdown: redcarpet
+highlighter: pygments
 safe: false
-title: 'Carte'
+title: 'TxtToSL Online - API Docs'

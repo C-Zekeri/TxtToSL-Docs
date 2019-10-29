@@ -3,4 +3,4 @@ permalink: ':title'
 markdown: redcarpet
 highlighter: pygments
 safe: false
-title: 'TxtToSL Online - API Docs'
+title: 'TxtToSL API - Docs'

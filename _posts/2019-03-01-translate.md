@@ -10,11 +10,11 @@ This endpoint allows (the actual) translating.
 
 #### Required
 
-- `hoster`: The place to host the output video. Available Options: (case-sensitive, depending on the server's configuration)
-  - `ftp`: Hosts via the server's FTP configuration
+- `hoster`: The place to host the output video. Available Options: (case-sensitive)
+  - `ftp`: Hosts via FTP / Oojmed (https://v.oojmed.com)
   - `imgur`: Hosts via [Imgur](https://imgur.com)
 
-- `lang`: The sign language to translate into. Available Options: (case-sensitive, depending on the server's configuration)
+- `lang`: The sign language to translate into. Available Options: (case-sensitive)
   - `BSL`: British Sign Language
   - `ASL`: American Sign Language
   - `DGS`: German Sign Language / Deutsche Gebärdensprache
@@ -28,15 +28,15 @@ This endpoint allows (the actual) translating.
 
 #### Optional
 
-- `overallSpeed`: Default is set by server configuration, usually: `100`. The overall speed of the output video. As a percentage number (`150` = `150%`, `50` = `50%`, etc.). The server imposes a limit, by default 50% - 150%.
-- `individualSpeed`: Default is set by server configuration, usually: `100`. The speed of individual letters (usually when spelling things out). As a percentage number (`150` = `150%`, `50` = `50%`, etc.). The server imposes a limit, by default 50% - 150%.
-- `quality`: Default is set by server configuration, usually: `360`. The quality of the output video. Given as a number (`144` = `144p`, `360` = `360p`), the server has a list of options. By default:
+- `overallSpeed`: Default: `100`. The overall speed of the output video. As a percentage (without %) (`150` = `150%`, `50` = `50%`, etc.). Limit: 50% - 150%.
+- `individualSpeed`: Default: `100`. The speed of individual letters (usually when spelling things out). As a percentage (without %) (`150` = `150%`, `50` = `50%`, etc.). Limit: 50% - 150%.
+- `quality`: Default `360`. The quality of the output video. Given as a number (`144` = `144p`, `360` = `360p`). Avaliable options:
   - 144
   - 240
   - 360
   - 480
 
-- `redirect`: Default is set by server configuration, usually: `true`. Whether to redirect to the URL (`true`) or send it in the response body (`false`).
+- `redirect`: Default: `true`. Whether to redirect to the URL (`true`) or send it in the response body (`false`).
 - `progressKey`: Default: `undefined`. The progress key to send feedback with.
 
 ### Response

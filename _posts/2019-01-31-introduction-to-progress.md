@@ -3,7 +3,7 @@ title: 'Introduction to Progress'
 category: 'Progress'
 ---
 
-Progress Keys are how the API / Server / Backend keep track of the progress of each request. How to use them:
+Progress Keys are how the API keep track of the progress of each request. How to use them:
 
 1. Get a progress key via the [`/progress/key`](#/get-a-progress-key) endpoint
 2. Provide progress key to [`/translate`](#/translate) endpoint
